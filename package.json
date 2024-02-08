@@ -7,6 +7,11 @@
     "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.70.0"
+  },
+  "dependencies": {
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^5.3.3"
   }
 }
