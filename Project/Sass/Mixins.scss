@@ -1,0 +1,115 @@
+@mixin MediaSizes($Device){
+    @if $Device == Mini{
+        @media (max-width: 739px){
+            @content;
+        }
+    }@else if $Device == Small{
+        @media (min-width: 740px) and (max-width : 989px){
+            @content;
+        }
+    }@else if $Device == Medium{
+        @media (min-width: 990px) and (max-width : 1199px){
+            @content;
+        }
+    }@else if $Device == Large{
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
+}
+
+@mixin MediaSizes-4-Sections($Device){
+    @if $Device == Mini{
+        @media (max-width: 739px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }@else if $Device == Small{
+        @media (min-width: 740px) and (max-width : 989px){
+            grid-template-columns: repeat(2,1fr);
+            @content;
+        }
+    }@else if $Device == Medium{
+        @media (min-width: 990px) and (max-width : 1199px){
+            grid-template-columns: repeat(3,1fr);
+            @content;
+        }
+    }@else if $Device == Large{
+        @media (min-width: 1200px){
+            grid-template-columns: repeat(4,1fr);
+            @content;
+        }
+    }
+}
+
+@mixin MediaSizes-3-Sections($Device){
+    @if $Device == Mini{
+        @media (max-width: 739px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }@else if $Device == Small{
+        @media (min-width: 740px) and (max-width : 989px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }@else if $Device == Medium{
+        @media (min-width: 990px) and (max-width : 1199px){
+            grid-template-columns: repeat(2,1fr);
+            @content;
+        }
+    }@else if $Device == Large{
+        @media (min-width: 1200px){
+            grid-template-columns: repeat(3,1fr);
+            @content;
+        }
+    }
+}
+
+@mixin MediaSizes-2-Sections($Device){
+    @if $Device == Mini{
+        @media (max-width: 739px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }@else if $Device == Small{
+        @media (min-width: 740px) and (max-width : 989px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }@else if $Device == Medium{
+        @media (min-width: 990px) and (max-width : 1199px){
+            grid-template-columns: repeat(2,1fr);
+            @content;
+        }
+    }@else if $Device == Large{
+        @media (min-width: 1200px){
+            grid-template-columns: repeat(2,1fr);
+            @content;
+        }
+    }
+}
+
+@mixin MediaSizes-1-Sections($Device){
+    @if $Device == Mini{
+        @media (max-width: 739px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }@else if $Device == Small{
+        @media (min-width: 740px) and (max-width : 989px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }@else if $Device == Medium{
+        @media (min-width: 990px) and (max-width : 1199px){
+            grid-template-columns: repeat(1,1fr);            
+            @content;
+        }
+    }@else if $Device == Large{
+        @media (min-width: 1200px){
+            grid-template-columns: repeat(1,1fr);
+            @content;
+        }
+    }
+}
