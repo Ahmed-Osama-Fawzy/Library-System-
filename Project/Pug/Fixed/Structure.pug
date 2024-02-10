@@ -1,0 +1,16 @@
+doctype 
+html(len="en")
+    head 
+        meta(charset="UTF-8")
+        link(rel="stylesheet", href="../../Css/all.css")
+        link(rel="stylesheet", href="../../Css/all.min.css")
+        link(rel="stylesheet", href="../../Css/main.css")
+        block Page_Title
+            title
+    body
+        include Header.pug
+        block Page_Content
+        include Footer.pug
+        script(src="../../Js/all.js")
+        script(src="../../Js/all.min.js")
+        script(src="../../Js/main.js")

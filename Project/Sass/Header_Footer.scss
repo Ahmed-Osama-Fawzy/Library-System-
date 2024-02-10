@@ -1,0 +1,181 @@
+@use 'Mixins.scss' as *;
+@use 'Variables.scss' as *;
+nav{
+    display: grid;
+    padding: 10px;
+    align-content:center;
+    background-color: $NoneDarkColor;
+    justify-content: space-around;
+    justify-items: center;
+    @include MediaSizes(Large){
+        grid-template-areas: "Logo Links Links Links Links Social Social";   
+    }
+    @include MediaSizes(Medium){ 
+        grid-template-areas: "Logo Links Links Links Links Social Social";   
+    }
+    @include MediaSizes(Small){
+        grid-template-areas: 
+        "Logo Logo Logo Logo" 
+        "Links Links Links Links" 
+        " Social Social Social Social";   
+    }
+    @include MediaSizes(Mini){
+        grid-template-areas: 
+        "Logo Logo Logo Logo" 
+        "Links Links Links Links"
+        " Social Social Social Social";
+        >div{
+            &:nth-of-type(2){
+                ul{
+                    display: block;
+                }
+                display: none;
+            }
+        }
+    }
+    >div{
+        &:first-of-type{
+            grid-area: Logo;
+        }
+        &:nth-of-type(2){
+            grid-area: Links;
+            line-height: 2;
+        }
+        &:last-of-type{
+            grid-area: Social;
+            line-height: 2;
+        }
+        >h1{
+            margin: 0;
+            font-size: 40px;
+            color: $HighDarkColor;
+            a{
+                text-decoration: none;
+            }
+            span{
+                font-size: 30px;
+                color: $MidDarkColor;
+            }
+        }
+        ul{
+            display: flex;
+            li{
+                list-style: none;
+                padding: 10px;
+                transition: $TransitionTime;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    font-size: x-large;
+                    font-weight: 600;
+                    color: $MidDarkColor;
+                    transition: $TransitionTime;
+                }
+                i{
+                    transition: $TransitionTime;  
+                }
+                &:hover{
+                    a,i{
+                        color: $LowDarkColor;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    display: grid;
+    padding: 10px;
+    align-content:center;
+    background-color: $NoneDarkColor;
+    justify-content: space-around;
+    justify-items: center;
+    gap: 20px;
+    @include MediaSizes-4-Sections(Large){
+        div{
+            &:last-of-type{
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+        }
+    }
+    @include MediaSizes-4-Sections(Medium){
+        div{
+            &:last-of-type{
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+        }
+    }
+    @include MediaSizes-4-Sections(Small){
+        div{
+            &:last-of-type{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+    }
+    @include MediaSizes-4-Sections(Mini){}
+    >div{
+        &:first-of-type{
+            img{
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+            }
+            h1{
+                a{
+                    text-decoration: none;
+                }
+                span{
+                    color: $MidDarkColor;
+                }
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    font-size: x-large;
+                    font-weight: 600;
+                    color: $MidDarkColor;
+                    transition: $TransitionTime;
+                }
+                &:hover{
+                    a{
+                        color: $LowDarkColor;
+                    }
+                }
+            }
+        }
+        &:nth-of-type(4){
+            img{
+                width: 75px;
+                height: 75px;
+                margin: 10px;
+                border-radius: 5px;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                li{
+                    a{
+                        text-decoration: none;
+                        font-size: x-large;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+        &:last-of-type{
+            font-size: large;
+            font-weight: 700;
+            color: $LowDarkColor;
+            span{
+                color: $HighDarkColor;
+            }
+        }
+    }
+}

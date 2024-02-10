@@ -3,7 +3,8 @@ $LowDarkColor: #1B263B;
 $MidDarkColor: #415A77;
 $LowDarkColor: #778DA9;
 $NoneDarkColor: #E0E1DD;
-
+$TransitionTime: 1s;
+$radius:5px;
 *{
     box-sizing: border-box;
 }
@@ -23,11 +24,35 @@ body{
 }
 
 %LightButton{
-
+    border: 3px solid $HighDarkColor;
+    border-radius: $radius;
+    padding: 15px 30px;
+    background-color: $LowDarkColor;
+    font-weight: 600;
+    color: $HighDarkColor;
+    text-transform: uppercase;
+    transition: $TransitionTime;
+    width: fit-content;
+    &:hover{
+        color: $LowDarkColor;
+        background-color: $HighDarkColor;
+    }
 }
 
 %DarkButton{
-
+    border: 3px solid $LowDarkColor;
+    border-radius: $radius;
+    padding: 15px 30px;
+    background-color: $HighDarkColor;
+    font-weight: 600;
+    color: $LowDarkColor;
+    text-transform: uppercase;
+    transition: $TransitionTime;
+    width: fit-content;
+    &:hover{
+        color: $HighDarkColor;
+        background-color: $LowDarkColor;
+    }
 }
 
 %LinkFormat{

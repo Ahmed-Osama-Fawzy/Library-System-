@@ -36,8 +36,7 @@ gulp.task("JsTask", ()=>{
 
 gulp.task("WatchTask", ()=>{
     gulp_livereload.listen()
-    gulp.watch('Project/Pug_Files/*.*',gulp.series('HtmlTask'))
-    gulp.watch('Project/Pug_Files/**/*.*',gulp.series('HtmlTask'))
-    gulp.watch('Project/Sass_Files/*.*',gulp.series('CssTask'))
-    gulp.watch('Project/Js_Files/*.*',gulp.series('JsTask'))
+    gulp.watch('Project/Pug/**/*.*',gulp.series('HtmlTask'))
+    gulp.watch('Project/Sass/**/*.*',gulp.series('CssTask'))
+    gulp.watch('Project/Js/*.*',gulp.series('JsTask'))
 })

@@ -1,0 +1,16 @@
+extends Structure.pug 
+block Page_Title
+    title Login
+block Page_Content
+    section(class="Login")
+        div 
+            img(src="../../Images/Books1.jpg", alt="")
+        div 
+            form(action="")
+                input(type="text" placeholder="Username")
+                input(type="password", name="" placeholder="Password")
+                div 
+                    input(type="checkbox", name="")
+                    label Show Password
+                    a(href="") Forget Password 
+                input(type="submit", value="LogIn")
