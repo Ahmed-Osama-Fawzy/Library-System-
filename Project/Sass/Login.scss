@@ -15,20 +15,13 @@
         }
         form{
             input{
-                font-size: large;
-                border: none;
-                height: 50px;
-                border-bottom: 2px solid $HighDarkColor;
                 &:not([type="checkbox"]){
                     display: block;
-                    width: 70%;
-                    margin: 80px 15%;
+                    @extend %input;
                 }
                 &[type="submit"]{
                     width: fit-content;
-                }
-                &:focus{
-                    border: none;
+                    @extend %inputSubmit;
                 }
                 &:last-of-type{
                     @extend %DarkButton;
@@ -36,13 +29,8 @@
             }
             >div{
                 width: 70%;
-                margin: 30px 15%;
+                margin: 30px 20%;
                 text-align: left;
-                label,input{
-                    display: inline;
-                    margin: 0;
-                    height: fit-content;
-                }
                 a{
                     margin-left: 50px;
                 }

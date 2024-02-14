@@ -9,6 +9,221 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.Cart > div:first-of-type h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #778DA9;
+  position: relative;
+  width: fit-content;
+}
+.Cart > div:first-of-type h1::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  animation-name: CycleLoop;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes CycleLoop {
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+  20% {
+    top: -10px;
+    left: 50%;
+  }
+  40% {
+    top: -10px;
+    left: 100%;
+  }
+  60% {
+    top: -10px;
+    left: 50%;
+  }
+  80% {
+    top: -10px;
+    left: -10px;
+  }
+  100% {
+    top: 100%;
+    left: -10px;
+  }
+}
+.Cart > div:first-of-type h1::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+.Cart > div:first-of-type h1::after, .Cart > div:first-of-type h1::before {
+  border: 7px solid #778DA9;
+  border-radius: 100%;
+}
+
+.Cart > div:last-of-type > div > div > button:first-of-type, .Cart > div:last-of-type > div > div > button:last-of-type, .Cart > div:last-of-type > div > div > div > svg {
+  border: 3px solid #778DA9;
+  border-radius: 5px;
+  padding: 15px 30px;
+  background-color: #0D1B2A;
+  font-weight: 600;
+  color: #778DA9;
+  text-transform: uppercase;
+  transition: 1s;
+  width: fit-content;
+  font-size: x-large;
+  height: 60px;
+}
+.Cart > div:last-of-type > div > div > button:hover:first-of-type, .Cart > div:last-of-type > div > div > button:hover:last-of-type, .Cart > div:last-of-type > div > div > div > svg:hover {
+  color: #0D1B2A;
+  background-color: #778DA9;
+}
+
+.Cart > div:first-of-type {
+  display: flex;
+  justify-content: center;
+}
+.Cart > div:last-of-type {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .Cart > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Cart > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Cart > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Cart > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Cart > div:last-of-type > div {
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+}
+.Cart > div:last-of-type > div > img {
+  width: 100%;
+  height: 100%;
+}
+.Cart > div:last-of-type > div > div {
+  padding: 20px;
+  background-color: #E0E1DD;
+}
+.Cart > div:last-of-type > div > div:nth-last-child(2) {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .Cart > div:last-of-type > div > div:nth-last-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Cart > div:last-of-type > div > div:nth-last-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Cart > div:last-of-type > div > div:nth-last-child(2) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Cart > div:last-of-type > div > div:nth-last-child(2) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Cart > div:last-of-type > div > div:nth-last-child(2) > h2 {
+  color: #415A77;
+}
+.Cart > div:last-of-type > div > div:nth-last-child(2) > h2 > span {
+  color: #778DA9;
+  padding-left: 20px;
+}
+.Cart > div:last-of-type > div > div:nth-last-child(2) > h2 > span > svg {
+  margin-left: 5px;
+}
+.Cart > div:last-of-type > div > div:last-of-type {
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .Cart > div:last-of-type > div > div:last-of-type {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Cart > div:last-of-type > div > div:last-of-type {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Cart > div:last-of-type > div > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Cart > div:last-of-type > div > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Cart > div:last-of-type > div > div > span {
+  font-size: xx-large;
+  font-weight: 900;
+}
+.Cart > div:last-of-type > div > div > div > svg {
+  padding: 5px;
+  margin-left: 5px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes CycleLoop {
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+  20% {
+    top: -10px;
+    left: 50%;
+  }
+  40% {
+    top: -10px;
+    left: 100%;
+  }
+  60% {
+    top: -10px;
+    left: 50%;
+  }
+  80% {
+    top: -10px;
+    left: -10px;
+  }
+  100% {
+    top: 100%;
+    left: -10px;
+  }
+}
 nav {
   display: grid;
   padding: 10px;
@@ -19,12 +234,12 @@ nav {
 }
 @media (min-width: 1200px) {
   nav {
-    grid-template-areas: "Logo Links Links Links Links Social Social";
+    grid-template-areas: "Logo Links Links Links Social Social Social";
   }
 }
 @media (min-width: 990px) and (max-width: 1199px) {
   nav {
-    grid-template-areas: "Logo Links Links Links Links Social Social";
+    grid-template-areas: "Logo Logo Logo Logo" "Links Links Social Social";
   }
 }
 @media (min-width: 740px) and (max-width: 989px) {
@@ -68,12 +283,24 @@ nav > div > h1 span {
 }
 nav > div ul {
   display: flex;
+  padding-left: 0;
 }
 nav > div ul li {
   list-style: none;
   padding: 10px;
   transition: 1s;
   text-align: center;
+}
+nav > div ul li span {
+  font-size: x-large;
+}
+nav > div ul li span i, nav > div ul li span p {
+  display: inline-block;
+}
+nav > div ul li span p {
+  text-transform: uppercase;
+  transition: 1s;
+  margin: 0;
 }
 nav > div ul li a {
   text-decoration: none;
@@ -91,7 +318,7 @@ nav > div ul li:hover a, nav > div ul li:hover i {
 
 footer {
   display: grid;
-  padding: 10px;
+  padding: 20px;
   align-content: center;
   background-color: #E0E1DD;
   justify-content: space-around;
@@ -191,6 +418,32 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes CycleLoop {
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+  20% {
+    top: -10px;
+    left: 50%;
+  }
+  40% {
+    top: -10px;
+    left: 100%;
+  }
+  60% {
+    top: -10px;
+    left: 50%;
+  }
+  80% {
+    top: -10px;
+    left: -10px;
+  }
+  100% {
+    top: 100%;
+    left: -10px;
+  }
+}
 .Login > div form input:last-of-type {
   border: 3px solid #778DA9;
   border-radius: 5px;
@@ -201,10 +454,32 @@ body {
   text-transform: uppercase;
   transition: 1s;
   width: fit-content;
+  font-size: x-large;
+  height: 60px;
 }
 .Login > div form input:hover:last-of-type {
   color: #0D1B2A;
   background-color: #778DA9;
+}
+
+.Login > div form input:not([type=checkbox]) {
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-bottom: 2px solid #0D1B2A;
+  width: 60%;
+  margin: 80px 20%;
+}
+.Login > div form input:focus:not([type=checkbox]) {
+  border: none;
+}
+
+.Login > div form input[type=submit] {
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-bottom: 2px solid #0D1B2A;
+  width: fit-content;
 }
 
 .Login {
@@ -237,32 +512,16 @@ body {
   width: 100%;
   height: 100%;
 }
-.Login > div form input {
-  font-size: large;
-  border: none;
-  height: 50px;
-  border-bottom: 2px solid #0D1B2A;
-}
 .Login > div form input:not([type=checkbox]) {
   display: block;
-  width: 70%;
-  margin: 80px 15%;
 }
 .Login > div form input[type=submit] {
   width: fit-content;
 }
-.Login > div form input:focus {
-  border: none;
-}
 .Login > div form > div {
   width: 70%;
-  margin: 30px 15%;
+  margin: 30px 20%;
   text-align: left;
-}
-.Login > div form > div label, .Login > div form > div input {
-  display: inline;
-  margin: 0;
-  height: fit-content;
 }
 .Login > div form > div a {
   margin-left: 50px;
@@ -277,5 +536,177 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.Register > div:first-of-type h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #778DA9;
+  position: relative;
+  width: fit-content;
+}
+.Register > div:first-of-type h1::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  animation-name: CycleLoop;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes CycleLoop {
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+  20% {
+    top: -10px;
+    left: 50%;
+  }
+  40% {
+    top: -10px;
+    left: 100%;
+  }
+  60% {
+    top: -10px;
+    left: 50%;
+  }
+  80% {
+    top: -10px;
+    left: -10px;
+  }
+  100% {
+    top: 100%;
+    left: -10px;
+  }
+}
+.Register > div:first-of-type h1::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+.Register > div:first-of-type h1::after, .Register > div:first-of-type h1::before {
+  border: 7px solid #778DA9;
+  border-radius: 100%;
+}
+
+.Register > div form > input:last-of-type {
+  border: 3px solid #778DA9;
+  border-radius: 5px;
+  padding: 15px 30px;
+  background-color: #0D1B2A;
+  font-weight: 600;
+  color: #778DA9;
+  text-transform: uppercase;
+  transition: 1s;
+  width: fit-content;
+  font-size: x-large;
+  height: 60px;
+}
+.Register > div form > input:hover:last-of-type {
+  color: #0D1B2A;
+  background-color: #778DA9;
+}
+
+.Register > div form > input:not([type=checkbox]) {
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-bottom: 2px solid #0D1B2A;
+  width: 60%;
+  margin: 80px 20%;
+}
+.Register > div form > input:focus:not([type=checkbox]) {
+  border: none;
+}
+
+.Register > div form > input[type=submit] {
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-bottom: 2px solid #0D1B2A;
+  width: fit-content;
+}
+
+.Register > div:first-of-type {
+  display: flex;
+  justify-content: center;
+}
+.Register > div form {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .Register > div form {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Register > div form > input:last-of-type {
+    grid-column-start: 1;
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Register > div form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Register > div form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Register > div form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Register > div form > input:not([type=checkbox]) {
+  display: block;
+}
+.Register > div form > input[type=submit] {
+  width: fit-content;
+}
+.Register > div form > div {
+  width: 70%;
+  margin: 20% 20% 30px 20%;
+  vertical-align: middle;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes CycleLoop {
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+  20% {
+    top: -10px;
+    left: 50%;
+  }
+  40% {
+    top: -10px;
+    left: 100%;
+  }
+  60% {
+    top: -10px;
+    left: 50%;
+  }
+  80% {
+    top: -10px;
+    left: -10px;
+  }
+  100% {
+    top: 100%;
+    left: -10px;
+  }
 }
 /*# sourceMappingURL=../Css_Maps/main.css.map */

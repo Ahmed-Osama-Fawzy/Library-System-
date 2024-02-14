@@ -8,10 +8,11 @@ nav{
     justify-content: space-around;
     justify-items: center;
     @include MediaSizes(Large){
-        grid-template-areas: "Logo Links Links Links Links Social Social";   
+        grid-template-areas: "Logo Links Links Links Social Social Social";   
     }
     @include MediaSizes(Medium){ 
-        grid-template-areas: "Logo Links Links Links Links Social Social";   
+        grid-template-areas: "Logo Logo Logo Logo"
+        "Links Links Social Social";   
     }
     @include MediaSizes(Small){
         grid-template-areas: 
@@ -59,11 +60,23 @@ nav{
         }
         ul{
             display: flex;
+            padding-left: 0;
             li{
                 list-style: none;
                 padding: 10px;
                 transition: $TransitionTime;
                 text-align: center;
+                span{
+                    font-size: x-large;
+                    i,p{
+                        display: inline-block;
+                    }
+                    p{
+                        text-transform: uppercase;
+                        transition: $TransitionTime;
+                        margin: 0;
+                    }
+                }
                 a{
                     text-decoration: none;
                     font-size: x-large;
@@ -85,7 +98,7 @@ nav{
 }
 footer{
     display: grid;
-    padding: 10px;
+    padding: 20px;
     align-content:center;
     background-color: $NoneDarkColor;
     justify-content: space-around;

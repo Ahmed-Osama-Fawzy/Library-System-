@@ -1,0 +1,45 @@
+@use 'Mixins.scss' as *;
+@use 'Variables.scss' as *;
+
+.Register{
+    >div{
+        &:first-of-type{
+            display: flex;
+            justify-content: center;
+            h1{
+                @extend %Title;
+            }
+        }
+        form{
+            display: grid;
+            @include MediaSizes-4-Sections(Large){
+                >input{
+                    &:last-of-type{
+                        grid-column-start: 1;
+                    }
+                }
+            }
+            @include MediaSizes-4-Sections(Medium){}
+            @include MediaSizes-4-Sections(Small){}
+            @include MediaSizes-4-Sections(Mini){}   
+            >input{
+                &:not([type="checkbox"]){
+                    display: block;
+                    @extend %input;
+                }
+                &[type="submit"]{
+                    width: fit-content;
+                    @extend %inputSubmit;
+                }
+                &:last-of-type{
+                    @extend %DarkButton;
+                }
+            }
+            >div{
+                width: 70%;
+                margin: 20% 20% 30px 20%;
+                vertical-align: middle;
+            }
+        }
+    }
+}

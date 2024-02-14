@@ -14,9 +14,99 @@ body{
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+@mixin Cycle($Direction){
+    @keyframes CycleLoop{
+        0%{
+            @if $Direction == after{
+                top: -10px;
+                left: -10px;
+            }
+            @else{
+                bottom: -10px;
+                right: -10px;
+            }
+        }
+        20%{
+            @if $Direction == after{
+                top: -10px;
+                left: 50%;
+            }
+            @else{
+                bottom: -10px;
+                right: 50%;
+            }
+        }
+        40%{
+            @if $Direction == after{
+                top: -10px;
+                left: 100%;
+            }
+            @else{
+                bottom: -10px;
+                right: 100%;
+            }
+        }
+        60%{
+            @if $Direction == after{
+                top: -10px;
+                left: 50%;
+            }
+            @else{
+                bottom: -10px;
+                right: 50%;
+            }
+        }
+        80%{
+            @if $Direction == after{
+                top: -10px;
+                left: -10px;
+            }
+            @else{
+                bottom: -10px;
+                right: -10px;
+            }
+        }
+        100%{
+            @if $Direction == after{
+                top: 100%;
+                left: -10px;
+            }
+            @else{
+                bottom: 100%;
+                right: -10px;
+            }
+        }
+    }
+    animation-name: CycleLoop;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
 %Title{
-
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: $LowDarkColor;
+    position: relative;
+    width: fit-content;
+    &::after{
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        @include Cycle("after");
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        //@include Cycle("before");
+    }
+    &::after, &::before{
+        border: 7px solid $LowDarkColor;
+        border-radius: 100%;
+    }
 }
 
 %SmallText{
@@ -33,6 +123,8 @@ body{
     text-transform: uppercase;
     transition: $TransitionTime;
     width: fit-content;
+    height: 60px;
+    font-size: x-large;
     &:hover{
         color: $LowDarkColor;
         background-color: $HighDarkColor;
@@ -49,6 +141,8 @@ body{
     text-transform: uppercase;
     transition: $TransitionTime;
     width: fit-content;
+    font-size: x-large;
+    height: 60px;
     &:hover{
         color: $HighDarkColor;
         background-color: $LowDarkColor;
@@ -70,3 +164,23 @@ body{
 %Animation{
 
 }
+%input{
+    font-size: large;
+    border: none;
+    height: 50px;
+    border-bottom: 2px solid $HighDarkColor;
+    width: 60%;
+    margin: 80px 20%;
+    &:focus{
+        border: none;
+    }
+}
+
+%inputSubmit{
+    font-size: large;
+    border: none;
+    height: 50px;
+    border-bottom: 2px solid $HighDarkColor;
+    width: fit-content;
+}
+
