@@ -1,0 +1,67 @@
+extends ../Fixed/Structure.pug
+block Page_Title
+    title Order Making
+block Page_Content 
+    section(class="MakeOrder")
+        ul 
+            li
+                h1 the Matches Books 
+            li 
+                img(src="../../Images/Books1.jpg", alt="")
+                div
+                    h2 Book Name:
+                        span Don't Try
+                    h2 Price:
+                        span 300 $
+                    h2 Amount: 
+                        span 1
+            li
+                img(src="../../Images/Books1.jpg", alt="")
+                div
+                    h2 Book Name:
+                        span Don't Try
+                    h2 Price:
+                        span 300 $
+                    h2 Amount: 
+                        span 1
+            li
+                img(src="../../Images/Books1.jpg", alt="")
+                div
+                    h2 Book Name:
+                        span Don't Try
+                    h2 Price:
+                        span 300 $
+                    h2 Amount: 
+                        span 1
+            li
+                img(src="../../Images/Books1.jpg", alt="")
+                div 
+                    h2 Book Name:
+                        span Don't Try
+                    h2 Price:
+                        span 300 $
+                    h2 Amount: 
+                        span 1
+        form(action="")
+            div     
+                label(for="") Recipient's Name
+                input(type="text" placeholder="Enter The Recipient Name" required) 
+            div
+                label(for="") Recipient's Address 
+                input(type="text" placeholder="Enter The Recipient Address" required) 
+            div
+                label(for="") Recipient's Phone 
+                input(type="text" placeholder="Enter The Recipient Phone Number" required)
+            div 
+                label(for="") Order Date 
+                input(type="date", name="" disabled)
+            div
+                label(for="") Receving Date 
+                input(type="date", name="" required)
+            div 
+                label(for="") Total Price
+                input(type="number", name="" disabled)
+            div 
+                label(for="") Delivery
+                input(type="number", name="" disabled)
+            input(type="submit" value="Confirm Order")

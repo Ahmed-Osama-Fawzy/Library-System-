@@ -75,4 +75,9 @@
             }
         }
     }
+    text-align: center;
+    >button{
+        @extend %DarkButton;
+        margin: 50px auto;
+    }
 }
