@@ -1,0 +1,32 @@
+@use "Mixins.scss" as *;
+@use "Variables.scss" as *;
+.ConfirmOrder{
+    >div{
+        padding: 20px;
+        >h1{
+            @extend %Title;
+            margin: 20px auto;
+        }
+        &:nth-of-type(2){
+            display: grid;
+            @include MediaSizes-2-Sections(Large){}
+            @include MediaSizes-2-Sections(Medium){}
+            @include MediaSizes-2-Sections(Small){}
+            @include MediaSizes-2-Sections(Mini){}
+            justify-items: start;
+            @extend %NestedTest;
+            >select{
+                @extend %LightButton;
+                padding: 10px;
+                text-transform: capitalize;
+            }
+        }
+        &:last-of-type{
+            display: flex;
+            justify-content: center;
+            >button{
+                @extend %DarkButton;
+            }
+        }
+    }
+}

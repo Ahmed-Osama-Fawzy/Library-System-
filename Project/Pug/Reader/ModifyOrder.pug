@@ -1,32 +1,12 @@
-extends Structure.pug 
+extends ../Fixed/Structure.pug
 block Page_Title
-    title Home
-block Page_Content
-    header 
-        h1 Header
-    section(class="Home Services")
-        h1 Services
-        div 
-            div 
-                i(class="fa-solid fa-3x fa-facebook")
-                h3 Fast Delivery
-                span Fast Delivery Fast Delivery Fast Delivery Fast Delivery Fast Delivery Fast Delivery
-            div 
-                i(class="fa-solid fa-3x fa-facebook")
-                h3 Metaphor
-                span Metaphor Metaphor Metaphor Metaphor Metaphor Metaphor Metaphor Metaphor Metaphor
-            div 
-                i(class="fa-solid fa-3x fa-facebook")
-                h3 Sales Services
-                span Sales Services Sales Services Sales Services Sales Services Sales Services Sales Services
-            div 
-                i(class="fa-solid fa-3x fa-facebook")
-                h3 Substituition
-                span Substituition Substituition Substituition Substituition Substituition Substituition
-    section(class="Home MostSoldBooks")
-        h1 Most Sold Books
+    title Mofidy Order
+block Page_Content 
+    section(class="Cart")
         div
-            div
+            h1 Selected Products 
+        div
+            div 
                 img(src="../../Images/Books1.jpg", alt="")
                 div
                     h2 Book Name:
@@ -42,10 +22,16 @@ block Page_Content
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
-                    button Add To Cart
-                    button  
-                        a(href="../Fixed/ShowBook.html") More
-            div
+                div
+                    span 1
+                    div
+                        i(class="fa-solid fa-1x fa-facebook")
+                        i(class="fa-solid fa-1x fa-facebook")
+                    button Cancel 
+                    button Replace
+                
+                        
+            div 
                 img(src="../../Images/Books1.jpg", alt="")
                 div
                     h2 Book Name:
@@ -61,10 +47,14 @@ block Page_Content
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
-                    button Add To Cart
-                    button  
-                        a(href="../Fixed/ShowBook.html") More
-            div
+                div
+                    span 1
+                    div
+                        i(class="fa-solid fa-1x fa-facebook")
+                        i(class="fa-solid fa-1x fa-facebook")
+                    button Cancel 
+                    button Replace
+            div 
                 img(src="../../Images/Books1.jpg", alt="")
                 div
                     h2 Book Name:
@@ -80,10 +70,14 @@ block Page_Content
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
-                    button Add To Cart
-                    button  
-                        a(href="../Fixed/ShowBook.html") More
-            div
+                div
+                    span 1
+                    div
+                        i(class="fa-solid fa-1x fa-facebook")
+                        i(class="fa-solid fa-1x fa-facebook")
+                    button Cancel 
+                    button Replace
+            div 
                 img(src="../../Images/Books1.jpg", alt="")
                 div
                     h2 Book Name:
@@ -99,16 +93,12 @@ block Page_Content
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
                             i(class="fa-solid fa-1x fa-facebook")
-                    button Add To Cart
-                    button  
-                        a(href="../Fixed/ShowBook.html") More
-    section
-        h1 Most Populer Writers
-    section  
-        h1 About Us 
-    section 
-        h1 Team 
-    section 
-        h1 Stats 
-    section 
-        h1 Contact Us 
+                div
+                    span 1
+                    div
+                        i(class="fa-solid fa-1x fa-facebook")
+                        i(class="fa-solid fa-1x fa-facebook")
+                    button Cancel 
+                    button Replace
+        Button 
+            a(href="../Reader/MakeOrder.html") Modify Order

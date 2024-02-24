@@ -97,16 +97,7 @@
                 border-radius: $radius;
             }
             >div{
-                >h2{
-                    color: $MidDarkColor;
-                    >span{
-                        color: $LowDarkColor;
-                        padding-left: 20px;
-                        >svg{
-                            margin-left: 5px;
-                        }
-                    }
-                }
+                @extend %NestedTest;
                 >button{
                     &:first-of-type{
                         @extend %LightButton;

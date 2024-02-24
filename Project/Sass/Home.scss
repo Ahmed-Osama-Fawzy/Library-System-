@@ -1,0 +1,58 @@
+@use "Mixins.scss" as *;
+@use "Variables.scss" as *;
+.Home{
+    >h1{
+        @extend %Title;
+        margin: 40px auto;
+    }
+    &.Services{
+        >div{
+            display: grid;
+            @include MediaSizes-4-Sections(Large){}
+            @include MediaSizes-4-Sections(Medium){}
+            @include MediaSizes-4-Sections(Small){}
+            @include MediaSizes-4-Sections(Mini){}
+            gap: 20px;
+            text-align: center;
+            >div{
+                >h3{
+                    @extend %SubTitle;
+                }
+                >span{
+                  @extend %SmallText;  
+                }
+            }
+        }
+    }
+    &.MostSoldBooks{
+        >div{
+            display: grid;
+            @include MediaSizes-4-Sections(Large){}
+            @include MediaSizes-4-Sections(Medium){}
+            @include MediaSizes-4-Sections(Small){}
+            @include MediaSizes-4-Sections(Mini){}
+            gap: 20px;
+            text-align: center;
+            >img{
+                width: 100%;
+                height: 60%;
+                border-radius: $radius;
+            }
+            >div{
+                @extend %NestedTest;
+                >button{
+                    &:first-of-type{
+                        @extend %LightButton;
+                        float: right;
+                    }
+                    &:last-of-type{
+                        @extend %DarkButton;
+                        float: left;
+                    }
+                    padding: 10px !important;
+                }
+            }
+        }
+    }
+    
+}

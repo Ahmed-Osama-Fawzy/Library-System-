@@ -17,6 +17,7 @@
             @include MediaSizes-1-Sections(Small){}
             @include MediaSizes-1-Sections(Mini){}
             >div{
+                margin: 10px auto;
                 display: grid;
                 grid-template-columns: 20% 40% 40%;
                 >img{
@@ -32,16 +33,7 @@
                         @include MediaSizes-2-Sections(Medium){}
                         @include MediaSizes-2-Sections(Small){}
                         @include MediaSizes-2-Sections(Mini){}
-                        >h2{
-                            color: $MidDarkColor;
-                            >span{
-                                color: $LowDarkColor;
-                                padding-left: 20px;
-                                >svg{
-                                    margin-left: 5px;
-                                }
-                            }
-                        }
+                        @extend %NestedTest;
                     }
                     &:last-of-type{
                         display: grid;
@@ -49,7 +41,7 @@
                         @include MediaSizes-2-Sections(Medium){}
                         @include MediaSizes-2-Sections(Small){}
                         @include MediaSizes-2-Sections(Mini){}
-                        justify-content: space-around;
+                        justify-items: center;
                         align-items: center;
                     }
                     >button{

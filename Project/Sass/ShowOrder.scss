@@ -1,7 +1,6 @@
-@use 'Mixins.scss' as *;
-@use 'Variables.scss' as *;
-
-.MakeOrder{
+@use "Mixins.scss" as *;
+@use "Variables.scss" as *;
+.ShowOrder{
     display: grid;
     @include MediaSizes-2-Sections(Large){}
     @include MediaSizes-2-Sections(Medium){}
@@ -48,36 +47,13 @@
             }
         }
     }
-    >form{
-        text-align: center;
-        input{
-            &:not([type="checkbox"]){
-                display: block;
-                @extend %input;
-            }
-            &[type="submit"]{
-                width: fit-content;
-                @extend %inputSubmit;
-            }
-            &:last-of-type{
-                @extend %DarkButton;
-                margin-left: 50%;
-            }
-        }
-        >div{
-            width: 90%;
-            margin: 20px 5%;
-            display: flex;
-            >label{
-                width: 50%;
-                font-size: x-large;
-                color: $MidDarkColor;
-                font-weight: 800;
-            }
-            >input{
-                width: 50%;
-                margin: 0 !important;
-            }
-        }
+    >div{
+        display: grid;
+        @include MediaSizes-2-Sections(Large){}
+        @include MediaSizes-2-Sections(Medium){}
+        @include MediaSizes-2-Sections(Small){}
+        @include MediaSizes-2-Sections(Mini){}
+        @extend %NestedTest;
+        align-items: center;
     }
 }

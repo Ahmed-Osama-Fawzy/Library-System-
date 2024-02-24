@@ -1,0 +1,30 @@
+extends ../Fixed/Structure.pug
+block Page_Title
+    title Confirm Order
+block Page_Content 
+    section(class="ConfirmOrder")
+        div
+            h1 Confirm Your Order
+        div 
+            h2 Name:
+                span Zian Ahmed Moussa
+            h2 Address:
+                span 24 Elharam ST. Giza
+            h2 Phone:
+                span +201000003333
+            h2 Book's Number:
+                span 10
+            h2 Order Date:
+                span 10/2/2020
+            h2 Reciving Date:
+                span 12/2/2020
+            h2 Total Price:
+                span 3000$
+            select(name="PaymentOptions")
+                option(value="Cash") Cash with Delivery
+                option(value="E-Wallet") EWallet 
+                option(value="Visa Card") Visa Card
+                option(value="InstaPay") InstaPay
+                option(value="VALU") VALU
+        div 
+            button Finish Order

@@ -3,11 +3,36 @@
 
 .Login{
     display: grid;
-    @include MediaSizes-2-Sections(Large){}
-    @include MediaSizes-2-Sections(Medium){}
-    @include MediaSizes-2-Sections(Small){}
+    @include MediaSizes-2-Sections(Large){
+        >div{
+            &:first-of-type{
+               grid-column-start: 1; 
+               grid-column-end: 5; 
+            }
+        }
+    }
+    @include MediaSizes-2-Sections(Medium){
+        >div{
+            &:first-of-type{
+               grid-column-start: 1; 
+               grid-column-end: 3; 
+            }
+        }
+    }
+    @include MediaSizes-2-Sections(Small){
+        >div{
+            &:first-of-type{
+               grid-column-start: 1; 
+               grid-column-end: 2; 
+            }
+        }
+    }
     @include MediaSizes-2-Sections(Mini){}
     >div{
+        >h1{
+            @extend %Title;
+            margin: 20px auto;
+        }
         line-height: 2;
         img{
             width: 100%;

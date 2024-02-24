@@ -1,0 +1,23 @@
+@use "Mixins.scss" as *;
+@use "Variables.scss" as *;
+.ShowBook{
+    display: grid;
+    @include MediaSizes-2-Sections(Large){}
+    @include MediaSizes-2-Sections(Medium){}
+    @include MediaSizes-2-Sections(Small){}
+    @include MediaSizes-2-Sections(Mini){}
+    gap: 20px;
+    padding: 20px;
+    >div{
+        @extend %NestedTest;
+        >img{
+            width: 100%;
+            height: 100%;
+            border-radius: $radius;
+        }
+        >button{
+            float: right;
+            @extend %DarkButton;
+        }
+    }
+}
