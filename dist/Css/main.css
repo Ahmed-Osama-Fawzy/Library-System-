@@ -7,6 +7,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .Cart > div:first-of-type h1 {
@@ -256,6 +257,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .ConfirmOrder > div > h1 {
@@ -463,6 +465,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 @keyframes CycleLoopAfter {
@@ -550,15 +553,36 @@ nav {
   nav {
     grid-template-areas: "Logo Links Links Links Social Social Social";
   }
+  nav > div:last-of-type {
+    grid-area: Social;
+    line-height: 2;
+  }
+  nav > div:last-of-type ul li:first-of-type {
+    visibility: hidden;
+  }
 }
 @media (min-width: 990px) and (max-width: 1199px) {
   nav {
     grid-template-areas: "Logo Logo Logo Logo" "Links Links Social Social";
   }
+  nav > div:last-of-type {
+    grid-area: Social;
+    line-height: 2;
+  }
+  nav > div:last-of-type ul li:first-of-type {
+    visibility: hidden;
+  }
 }
 @media (min-width: 740px) and (max-width: 989px) {
   nav {
     grid-template-areas: "Logo Logo Logo Logo" "Links Links Links Links" " Social Social Social Social";
+  }
+  nav > div:last-of-type {
+    grid-area: Social;
+    line-height: 2;
+  }
+  nav > div:last-of-type ul li:first-of-type {
+    visibility: hidden;
   }
 }
 @media (max-width: 739px) {
@@ -570,6 +594,10 @@ nav {
   }
   nav > div:nth-of-type(2) ul {
     display: block;
+  }
+  nav > div:last-of-type ul li:first-of-type {
+    visibility: visible;
+    margin: auto;
   }
 }
 nav > div:first-of-type {
@@ -628,6 +656,10 @@ nav > div ul li i {
 }
 nav > div ul li:hover a, nav > div ul li:hover i {
   color: #778DA9;
+}
+
+.Show {
+  display: block !important;
 }
 
 footer {
@@ -730,6 +762,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .Home > h1 {
@@ -1265,6 +1298,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .Library > div:first-of-type > div > h1 {
@@ -1547,6 +1581,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .Login > div > h1 {
@@ -1762,6 +1797,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .MakeOrder > ul > li:first-of-type h1 {
@@ -2023,6 +2059,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .Register > div:first-of-type h1 {
@@ -2220,6 +2257,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 @keyframes CycleLoopAfter {
@@ -2371,6 +2409,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .ShowOrder > ul > li:first-of-type h1 {
@@ -2586,6 +2625,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .ShowOrders > div:first-of-type > h1 {
@@ -2795,6 +2835,7 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 @keyframes CycleLoopAfter {

@@ -7,17 +7,56 @@ nav{
     justify-content: space-around;
     justify-items: center;
     @include MediaSizes(Large){
-        grid-template-areas: "Logo Links Links Links Social Social Social";   
+        grid-template-areas: "Logo Links Links Links Social Social Social";  
+        >div{
+            &:last-of-type{
+                grid-area: Social;
+                line-height: 2;
+                ul{
+                    li{
+                        &:first-of-type{
+                            visibility:hidden;
+                        }
+                    }
+                }
+            }
+        } 
     }
     @include MediaSizes(Medium){ 
         grid-template-areas: "Logo Logo Logo Logo"
         "Links Links Social Social";   
+        >div{
+            &:last-of-type{
+                grid-area: Social;
+                line-height: 2;
+                ul{
+                    li{
+                        &:first-of-type{
+                            visibility:hidden;
+                        }
+                    }
+                }
+            }
+        }
     }
     @include MediaSizes(Small){
         grid-template-areas: 
         "Logo Logo Logo Logo" 
         "Links Links Links Links" 
         " Social Social Social Social";   
+        >div{
+            &:last-of-type{
+                grid-area: Social;
+                line-height: 2;
+                ul{
+                    li{
+                        &:first-of-type{
+                            visibility:hidden;
+                        }
+                    }
+                }
+            }
+        }
     }
     @include MediaSizes(Mini){
         grid-template-areas: 
@@ -30,6 +69,16 @@ nav{
                     display: block;
                 }
                 display: none;
+            }
+            &:last-of-type{
+                ul{
+                    li{
+                        &:first-of-type{
+                            visibility:visible;
+                            margin: auto;
+                        }
+                    }
+                }
             }
         }
     }
@@ -95,6 +144,11 @@ nav{
         }
     }
 }
+
+.Show{
+    display: block !important;
+}
+
 footer{
     display: grid;
     padding: 20px;

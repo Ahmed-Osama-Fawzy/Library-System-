@@ -29,7 +29,7 @@ gulp.task("JsTask", ()=>{
     return gulp
             .src('Project/Ts/*.ts')
             .pipe(gulp_concat('main.ts'))
-            .pipe(gulp_typescript())
+            .pipe(gulp_typescript({noImplicitAny: true}))
             .pipe(gulp.dest('dist/Js'))
             .pipe(gulp_livereload())
 })
@@ -38,5 +38,5 @@ gulp.task("WatchTask", ()=>{
     gulp_livereload.listen()
     gulp.watch('Project/Pug/**/*.*',gulp.series('HtmlTask'))
     gulp.watch('Project/Sass/**/*.*',gulp.series('CssTask'))
-    gulp.watch('Project/Js/*.*',gulp.series('JsTask'))
+    gulp.watch('Project/Ts/*.*',gulp.series('JsTask'))
 })

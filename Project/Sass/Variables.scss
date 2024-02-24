@@ -13,6 +13,7 @@ body{
     width: 100%;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 @mixin CycleAfter(){
     @keyframes CycleLoopAfter{
