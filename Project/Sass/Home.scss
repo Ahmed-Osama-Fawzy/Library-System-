@@ -1,11 +1,80 @@
 @use "Mixins.scss" as *;
 @use "Variables.scss" as *;
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Images/MenRead.jpg");
+    background-position: center center;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    >h1{
+        margin: 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 50px;
+        color: $HighDarkColor;
+    }
+    @include MediaSizes(Large){
+        >h1{
+            font-size: 120px;
+            width: 50%;
+        }
+    }
+    @include MediaSizes(Medium){
+        >h1{
+            font-size: 100px;
+            width: 60%;
+        }
+    }
+    @include MediaSizes(Small){
+        >h1{
+            font-size: 80px;
+            width: 80%;
+        }
+    }
+    @include MediaSizes(Mini){
+        >h1{
+            font-size: 60px;
+            width: 100%;
+        }
+    }
+    >button{
+        @extend %LightButton;
+        margin-left: 50px;
+    }
+}
 .Home{
+    padding: 40px;
     >h1{
         @extend %Title;
         margin: 40px auto;
     }
+    &:not(&.Stats,&.ContactUs,&.AboutUs){
+        position: relative;
+        &::after{
+            content: "L";
+            left: 20px;
+        }
+        &::before{
+            content: "R";
+            right: 20px;
+            
+        }
+        &::after,&::before{
+            position: absolute;
+            top: 50%;
+            color: $LowDarkColor;
+            font-size: 50px;
+            transition: $TransitionTime;
+            cursor: pointer;
+            &:hover{
+                color: $NoneDarkColor;
+            }
+        }
+    }
     &.Services{
+        background-color: $NoneDarkColor;
         >div{
             display: grid;
             @include MediaSizes-4-Sections(Large){}
@@ -25,6 +94,7 @@
         }
     }
     &.MostSoldBooks{
+        background-color: $AvgDarkColor;
         >div{
             display: grid;
             @include MediaSizes-4-Sections(Large){}
@@ -33,26 +103,166 @@
             @include MediaSizes-4-Sections(Mini){}
             gap: 20px;
             text-align: center;
-            >img{
-                width: 100%;
-                height: 60%;
-                border-radius: $radius;
-            }
             >div{
-                @extend %NestedTest;
-                >button{
-                    &:first-of-type{
-                        @extend %LightButton;
-                        float: right;
+                border: 3px solid $NoneDarkColor;
+                padding: 10px;
+                border-radius: $radius;
+                margin: 20px;
+                height: fit-content;
+                >img{
+                    width: 100%;
+                    height: 60%;
+                    border-radius: $radius;
+                }
+                >div{
+                    @extend %NestedTest;
+                    >button{
+                        &:first-of-type{
+                            @extend %LightButton;
+                            float: right;
+                        }
+                        &:last-of-type{
+                            @extend %DarkButton;
+                            float: left;
+                        }
+                        padding: 10px !important;
                     }
-                    &:last-of-type{
-                        @extend %DarkButton;
-                        float: left;
-                    }
-                    padding: 10px !important;
                 }
             }
         }
     }
-    
+    &.MostPopulerWriters{
+        background-color: $NoneDarkColor;
+        >div{
+            display: grid;
+            @include MediaSizes-4-Sections(Large){}
+            @include MediaSizes-4-Sections(Medium){}
+            @include MediaSizes-4-Sections(Small){}
+            @include MediaSizes-4-Sections(Mini){}
+            gap: 20px;
+            text-align: center;
+            >div{
+                >img{
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 100%
+                }
+                >h3{
+                    @extend %SubTitle;
+                }
+                >span{
+                  @extend %SmallText;  
+                }
+            }
+        }
+    }
+    &.AboutUs{
+        background-color: $AvgDarkColor;
+        >div{
+            display: grid;
+            @include MediaSizes-2-Sections(Large){}
+            @include MediaSizes-2-Sections(Medium){}
+            @include MediaSizes-2-Sections(Small){}
+            @include MediaSizes-2-Sections(Mini){}
+            gap: 20px;
+            >div{
+                >img{
+                    width: 100%;
+                    height: 100%;
+                }
+                font-size: xx-large;
+                color: $MidDarkColor;
+                font-weight: 600;
+                padding: 50px;
+            }
+        }
+    }
+    &.Team{
+        background-color: $NoneDarkColor;
+        >div{
+            display: grid;
+            @include MediaSizes-4-Sections(Large){}
+            @include MediaSizes-4-Sections(Medium){}
+            @include MediaSizes-4-Sections(Small){}
+            @include MediaSizes-4-Sections(Mini){}
+            gap: 20px;
+            text-align: center;
+            >div{
+                >img{
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 100%
+                }
+                >h3{
+                    @extend %SubTitle;
+                    color: $LowDarkColor;
+                }
+                >span{
+                  @extend %SmallText;  
+                }
+            }
+        }
+    }
+    &.Stats{
+        background-color: $MidDarkColor;
+        >div{
+            display: grid;
+            @include MediaSizes-4-Sections(Large){}
+            @include MediaSizes-4-Sections(Medium){}
+            @include MediaSizes-4-Sections(Small){}
+            @include MediaSizes-4-Sections(Mini){}
+            gap: 20px;
+            text-align: center;
+            >div{
+                >h3{
+                    @extend %SubTitle;
+                    font-size: 50px
+                }
+                >span{
+                  @extend %SmallText;  
+                  line-height: 0;
+                }
+            }
+        }
+    }
+    &.ContactUs{
+        background-color: $AvgDarkColor;
+        >div{
+            display: grid;
+            @include MediaSizes-2-Sections(Large){}
+            @include MediaSizes-2-Sections(Medium){}
+            @include MediaSizes-2-Sections(Small){}
+            @include MediaSizes-2-Sections(Mini){}
+            gap: 20px;
+            >div{
+                >img{
+                    width: 100%;
+                    height: 100%;
+                }
+                form{
+                    input{
+                        &:not([type="checkbox"]){
+                            display: block;
+                            @extend %input;
+                        }
+                        &[type="submit"]{
+                            width: fit-content;
+                            @extend %inputSubmit;
+                        }
+                        &:last-of-type{
+                            @extend %DarkButton;
+                        }
+                    }
+                    textarea{
+                        display: block;
+                        @extend %input;
+                    }
+                    input,textarea{
+                        border-radius: 10px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
 }

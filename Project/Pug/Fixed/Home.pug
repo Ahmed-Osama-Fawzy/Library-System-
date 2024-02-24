@@ -2,8 +2,9 @@ extends Structure.pug
 block Page_Title
     title Home
 block Page_Content
-    header 
-        h1 Header
+    header
+        h1 More Reading More Knowledge
+        button Be More Confident
     section(class="Home Services")
         h1 Services
         div 
@@ -102,13 +103,83 @@ block Page_Content
                     button Add To Cart
                     button  
                         a(href="../Fixed/ShowBook.html") More
-    section
+    section(class="Home MostPopulerWriters")
         h1 Most Populer Writers
-    section  
-        h1 About Us 
-    section 
+        div
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span 50 Books - 
+                span 1950:1990
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span 50 Books - 
+                span 1950:1990
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span 50 Books - 
+                span 1950:1990
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span 50 Books - 
+                span 1950:1990
+    section(class="Home AboutUs")
+        h1 Contact Us
+        div
+            div
+                img(src="../../Images/Books1.jpg", alt="")
+            div It’s a great example of how to use such a page as a sort of pre-sales platform, It’s a great example of how to use such a page as a sort of pre-sales platform, It’s a great example of how to use such a page as a sort of pre-sales platform, It’s a great example of how to use such a page as a sort of pre-sales platform, It’s a great example of how to use such a page as a sort of pre-sales platform.
+    section(class="Home Team")
         h1 Team 
-    section 
-        h1 Stats 
-    section 
-        h1 Contact Us 
+        div
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span CEO
+                span 1950:1990
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span IT Engineer 
+                span 1950:1990
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span Main Manager
+                span 1950:1990
+            div 
+                img(src="../../Images/Books1.jpg", alt="")
+                h3 Zaih Younes
+                span Sales Manager
+                span 1950:1990
+    section(class="Home Stats")
+        div 
+            div 
+                i(class="fa-solid fa-3x fa-facebook")
+                h3 +200K
+                span Books
+            div 
+                i(class="fa-solid fa-3x fa-facebook")
+                h3 +100K
+                span Writers
+            div 
+                i(class="fa-solid fa-3x fa-facebook")
+                h3 +250K
+                span Users
+            div 
+                i(class="fa-solid fa-3x fa-facebook")
+                h3 +10K
+                span Team Members
+    section(class="Home ContactUs")
+        h1 Contact Us
+        div
+            div
+                img(src="../../Images/Books1.jpg", alt="")
+            div 
+                form(action="")
+                    input(type="text" placeholder="Username" required)
+                    textarea(name="", cols="30", rows="10")
+                    input(type="submit", value="Send")

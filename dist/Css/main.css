@@ -541,7 +541,6 @@ body {
 }
 nav {
   display: grid;
-  padding: 10px;
   align-content: center;
   background-color: #E0E1DD;
   justify-content: space-around;
@@ -836,7 +835,7 @@ body {
   border-radius: 100%;
 }
 
-.Home.MostSoldBooks > div > div > button:first-of-type {
+header > button, .Home.MostSoldBooks > div > div > div > button:first-of-type {
   border: 3px solid #0D1B2A;
   border-radius: 5px;
   padding: 15px 30px;
@@ -848,17 +847,17 @@ body {
   width: fit-content;
   font-size: x-large;
 }
-.Home.MostSoldBooks > div > div > button:hover:first-of-type {
+header > button:hover, .Home.MostSoldBooks > div > div > div > button:hover:first-of-type {
   color: #778DA9;
   background-color: #0D1B2A;
 }
-.Home.MostSoldBooks > div > div > button:first-of-type a {
+header > button a, .Home.MostSoldBooks > div > div > div > button:first-of-type a {
   text-decoration: none;
   color: inherit;
   transition: inherit;
 }
 
-.Home.MostSoldBooks > div > div > button:last-of-type {
+.Home.MostSoldBooks > div > div > div > button:last-of-type, .Home.ContactUs > div > div form input:last-of-type {
   border: 3px solid #778DA9;
   border-radius: 5px;
   padding: 15px 30px;
@@ -870,42 +869,134 @@ body {
   width: fit-content;
   font-size: x-large;
 }
-.Home.MostSoldBooks > div > div > button:hover:last-of-type {
+.Home.MostSoldBooks > div > div > div > button:hover:last-of-type, .Home.ContactUs > div > div form input:hover:last-of-type {
   color: #0D1B2A;
   background-color: #778DA9;
 }
-.Home.MostSoldBooks > div > div > button:last-of-type a {
+.Home.MostSoldBooks > div > div > div > button:last-of-type a, .Home.ContactUs > div > div form input:last-of-type a {
   text-decoration: none;
   color: inherit;
   transition: inherit;
 }
 
-.Home.Services > div > div > span {
+.Home.Services > div > div > span, .Home.MostPopulerWriters > div > div > span, .Home.Team > div > div > span, .Home.Stats > div > div > span {
   font-size: large;
   font-weight: 400;
   line-height: 1.5;
   color: #778DA9;
 }
 
-.Home.Services > div > div > h3 {
+.Home.Services > div > div > h3, .Home.MostPopulerWriters > div > div > h3, .Home.Team > div > div > h3, .Home.Stats > div > div > h3 {
   font-size: xx-large;
   font-weight: 600;
   color: #1B263B;
 }
 
-.Home.MostSoldBooks > div > div > h2 {
+.Home.ContactUs > div > div form input:not([type=checkbox]), .Home.ContactUs > div > div form textarea {
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-bottom: 2px solid #0D1B2A;
+  width: 60%;
+  margin: 80px 20%;
+}
+.Home.ContactUs > div > div form input:focus:not([type=checkbox]), .Home.ContactUs > div > div form textarea:focus {
+  border: none;
+}
+
+.Home.ContactUs > div > div form input[type=submit] {
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-bottom: 2px solid #0D1B2A;
+  width: fit-content;
+}
+
+.Home.MostSoldBooks > div > div > div > h2 {
   color: #415A77;
 }
-.Home.MostSoldBooks > div > div > h2 > span {
+.Home.MostSoldBooks > div > div > div > h2 > span {
   color: #778DA9;
   padding-left: 20px;
 }
-.Home.MostSoldBooks > div > div > h2 > span > svg {
+.Home.MostSoldBooks > div > div > div > h2 > span > svg {
   margin-left: 5px;
 }
 
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../Images/MenRead.jpg");
+  background-position: center center;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+header > h1 {
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 50px;
+  color: #0D1B2A;
+}
+@media (min-width: 1200px) {
+  header > h1 {
+    font-size: 120px;
+    width: 50%;
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  header > h1 {
+    font-size: 100px;
+    width: 60%;
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  header > h1 {
+    font-size: 80px;
+    width: 80%;
+  }
+}
+@media (max-width: 739px) {
+  header > h1 {
+    font-size: 60px;
+    width: 100%;
+  }
+}
+header > button {
+  margin-left: 50px;
+}
+
+.Home {
+  padding: 40px;
+}
 .Home > h1 {
   margin: 40px auto;
+}
+.Home:not(.Home.Stats, .Home.ContactUs, .Home.AboutUs) {
+  position: relative;
+}
+.Home:not(.Home.Stats, .Home.ContactUs, .Home.AboutUs)::after {
+  content: "L";
+  left: 20px;
+}
+.Home:not(.Home.Stats, .Home.ContactUs, .Home.AboutUs)::before {
+  content: "R";
+  right: 20px;
+}
+.Home:not(.Home.Stats, .Home.ContactUs, .Home.AboutUs)::after, .Home:not(.Home.Stats, .Home.ContactUs, .Home.AboutUs)::before {
+  position: absolute;
+  top: 50%;
+  color: #778DA9;
+  font-size: 50px;
+  transition: 1s;
+  cursor: pointer;
+}
+.Home:not(.Home.Stats, .Home.ContactUs, .Home.AboutUs)::after:hover, .Home:not(.Home.Stats, .Home.ContactUs, .Home.AboutUs)::before:hover {
+  color: #E0E1DD;
+}
+.Home.Services {
+  background-color: #E0E1DD;
 }
 .Home.Services > div {
   display: grid;
@@ -932,6 +1023,9 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.Home.MostSoldBooks {
+  background-color: #1B263B;
+}
 .Home.MostSoldBooks > div {
   display: grid;
   gap: 20px;
@@ -957,19 +1051,210 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-.Home.MostSoldBooks > div > img {
+.Home.MostSoldBooks > div > div {
+  border: 3px solid #E0E1DD;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  height: fit-content;
+}
+.Home.MostSoldBooks > div > div > img {
   width: 100%;
   height: 60%;
   border-radius: 5px;
 }
-.Home.MostSoldBooks > div > div > button {
+.Home.MostSoldBooks > div > div > div > button {
   padding: 10px !important;
 }
-.Home.MostSoldBooks > div > div > button:first-of-type {
+.Home.MostSoldBooks > div > div > div > button:first-of-type {
   float: right;
 }
-.Home.MostSoldBooks > div > div > button:last-of-type {
+.Home.MostSoldBooks > div > div > div > button:last-of-type {
   float: left;
+}
+.Home.MostPopulerWriters {
+  background-color: #E0E1DD;
+}
+.Home.MostPopulerWriters > div {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .Home.MostPopulerWriters > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Home.MostPopulerWriters > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Home.MostPopulerWriters > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Home.MostPopulerWriters > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Home.MostPopulerWriters > div > div > img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+.Home.AboutUs {
+  background-color: #1B263B;
+}
+.Home.AboutUs > div {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 1200px) {
+  .Home.AboutUs > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Home.AboutUs > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Home.AboutUs > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Home.AboutUs > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Home.AboutUs > div > div {
+  font-size: xx-large;
+  color: #415A77;
+  font-weight: 600;
+  padding: 50px;
+}
+.Home.AboutUs > div > div > img {
+  width: 100%;
+  height: 100%;
+}
+.Home.Team {
+  background-color: #E0E1DD;
+}
+.Home.Team > div {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .Home.Team > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Home.Team > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Home.Team > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Home.Team > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Home.Team > div > div > img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+}
+.Home.Team > div > div > h3 {
+  color: #778DA9;
+}
+.Home.Stats {
+  background-color: #415A77;
+}
+.Home.Stats > div {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .Home.Stats > div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Home.Stats > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Home.Stats > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Home.Stats > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Home.Stats > div > div > h3 {
+  font-size: 50px;
+}
+.Home.Stats > div > div > span {
+  line-height: 0;
+}
+.Home.ContactUs {
+  background-color: #1B263B;
+}
+.Home.ContactUs > div {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 1200px) {
+  .Home.ContactUs > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .Home.ContactUs > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .Home.ContactUs > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .Home.ContactUs > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.Home.ContactUs > div > div > img {
+  width: 100%;
+  height: 100%;
+}
+.Home.ContactUs > div > div form input:not([type=checkbox]) {
+  display: block;
+}
+.Home.ContactUs > div > div form input[type=submit] {
+  width: fit-content;
+}
+.Home.ContactUs > div > div form textarea {
+  display: block;
+}
+.Home.ContactUs > div > div form input, .Home.ContactUs > div > div form textarea {
+  border-radius: 10px;
+  padding: 10px;
 }
 * {
   box-sizing: border-box;
