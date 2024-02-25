@@ -2,17 +2,18 @@ extends Structure.pug
 block Page_Title
     title Login
 block Page_Content
+    button(id="ChangeState") Change State
     section(class="Login")
         div 
             h1 Enter To Your Own World
         div 
             img(src="/Library-System-/dist/Images/Books1.jpg", alt="")
         div 
-            form(action="")
+            form(action="" method="post")
                 input(type="text" placeholder="Username" required)
                 input(type="password", name="" placeholder="Password" required)
                 div 
                     input(type="checkbox", name="")
-                    label Show Password
+                    label REMEBER ME
                     a(href="") Forget Password 
                 input(type="submit", value="LogIn")

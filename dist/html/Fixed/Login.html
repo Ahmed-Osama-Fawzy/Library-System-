@@ -19,9 +19,7 @@
           <li> <a href="/Library-System-/dist/html/Fixed/Home.html#AboutUs">About</a></li>
           <li> <a href="/Library-System-/dist/html/Fixed/Home.html#Team">Team</a></li>
           <li> <a href="/Library-System-/dist/html/Fixed/Home.html#Services">Services</a></li>
-          <li> <a href="/Library-System-/dist/html/Fixed/Home.html#Writers">Writers</a>
-            <!--a(href="/Library-System-/dist/html/Reader/Cart.html") Cart-->
-          </li>
+          <li> <a href="/Library-System-/dist/html/Fixed/Home.html#Writers">Writers</a></li>
         </ul>
       </div>
       <div> 
@@ -31,25 +29,26 @@
           <li> <a href=""><i class="fa-brands fa-1x fa-twitter"></i></a></li>
           <li> <a href=""><i class="fa-brands fa-1x fa-linkedin"></i></a></li>
           <li> <a href=""><i class="fa-solid fa-envelope"></i></a></li>
-          <li> <span> <i class="fa-solid fa-right-to-bracket"></i>
-              <p> <a href="/Library-System-/dist/html/Fixed/Login.html">Login</a></p></span></li>
-          <li><span> <i class="fa-regular fa-user"></i>
-              <p> <a href="/Library-System-/dist/html/Reader/Register.html">SignIn</a></p></span></li>
+          <li> <span id="LogInCont"><i class="fa-solid fa-right-to-bracket" id="LogInIcon"></i>
+              <p> <a href="/Library-System-/dist/html/Fixed/Login.html" id="LogIn">Login</a></p></span></li>
+          <li><span id="SignInCont"><i class="fa-regular fa-user" id="SignInIcon"></i>
+              <p> <a href="/Library-System-/dist/html/Reader/Register.html" id="SignIn">SignIn</a></p></span></li>
         </ul>
       </div>
     </nav>
+    <button id="ChangeState">Change State</button>
     <section class="Login">
       <div> 
         <h1>Enter To Your Own World</h1>
       </div>
       <div> <img src="/Library-System-/dist/Images/Books1.jpg" alt=""></div>
       <div> 
-        <form action="">
+        <form action="" method="post">
           <input type="text" placeholder="Username" required>
           <input type="password" name="" placeholder="Password" required>
           <div> 
             <input type="checkbox" name="">
-            <label>Show Password</label><a href="">Forget Password </a>
+            <label>REMEBER ME</label><a href="">Forget Password </a>
           </div>
           <input type="submit" value="LogIn">
         </form>
