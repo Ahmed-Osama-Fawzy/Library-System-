@@ -132,11 +132,11 @@ nav{
                     color: $MidDarkColor;
                     transition: $TransitionTime;
                 }
-                i{
+                svg{
                     transition: $TransitionTime;  
                 }
                 &:hover{
-                    a,i{
+                    a,svg{
                         color: $LowDarkColor;
                     }
                 }

@@ -1,0 +1,34 @@
+extends Fixed/Structure.pug
+block Page_Title
+    title Add Book 
+block Page_Content 
+    section(class="AddBook")
+        div
+            h1 Add New Book
+            form(action="")
+                div 
+                    label(for="") Book Title
+                    input(type="text", name="BookName")
+                div 
+                    label(for="") Book Price
+                    input(type="number", name="BookPrice")
+                div 
+                    label(for="") Book Amount
+                    input(type="number", name="BookAmount")
+                div 
+                    label(for="") Book Author Name
+                    input(type="text", name="BookAuthor")
+                div 
+                    label(for="") Book Pages Number
+                    input(type="number", name="BookPagesNumber")
+                div 
+                    label(for="") Upload Book 
+                    input(type="file", name="TheBook")
+                div 
+                    label Category
+                    select 
+                        option(value="Most Sold") Most Sold
+                        option(value="Recantly Added")  Recantly Added
+                        option(value="Most Readed")  Most Readed
+                        option(value="Lowest Price")  Lowest Price
+                        option(value="Highest Price")  Highest Price

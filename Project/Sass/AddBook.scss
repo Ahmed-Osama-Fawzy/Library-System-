@@ -1,0 +1,30 @@
+@use "Mixins.scss" as *;
+@use "Variables.scss" as *;
+.AddBook{
+    float: left;
+    width: 80%;
+    >div{
+        >h1{
+            @extend %Title;
+            margin: 50px auto;
+        }
+        >form{
+            display: grid;
+            @include MediaSizes-4-Sections(Large){}
+            @include MediaSizes-4-Sections(Medium){}
+            @include MediaSizes-4-Sections(Small){}
+            @include MediaSizes-4-Sections(Mini){}   
+            >div{
+                label,input{
+                    display: block;
+                }
+                >label{
+                    @extend %SubTitle;
+                }
+                >input{
+                    @extend %input;
+                }
+            }
+        }
+    }
+}

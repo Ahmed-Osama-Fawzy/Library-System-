@@ -1,0 +1,50 @@
+@use "Mixins.scss" as *;
+@use "Variables.scss" as *;
+.ANavbar{
+    width: 100%;
+    height: 10vh;
+    background-color: $NoneDarkColor;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: end;
+    div{
+        img{
+            height: 70px;
+            width: 70px;
+            border-radius: 100%;
+            display: inline-block;
+        }
+        h3{
+            display: inline-block;
+            margin: auto 10px;
+            @extend %LinkStyle;
+        }
+        &:last-of-type{
+           display: flex;
+        }
+    }
+}
+aside{
+    width: 20%;
+    height: 90vh;
+    float: left;
+    background-color: $NoneDarkColor;
+    ul{
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(10,10%);
+        list-style: none;
+        li{
+            @extend %LinkStyle;
+            a{
+                text-decoration: none;
+                color: inherit;
+                transition: $TransitionTime;
+            }
+            svg{
+                margin-right: 10px;
+            }
+        }
+    }
+}

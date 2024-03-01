@@ -10,6 +10,172 @@ body {
   scroll-behavior: smooth;
 }
 
+.AddBook > div > h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #778DA9;
+  position: relative;
+  width: fit-content;
+}
+.AddBook > div > h1::after {
+  content: "";
+  position: absolute;
+  animation-name: CycleLoopAfter;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes CycleLoopAfter {
+  0% {
+    top: -15px;
+    left: -15px;
+    border-color: #0D1B2A;
+  }
+  20% {
+    top: -15px;
+    left: 50%;
+    border-color: #1B263B;
+  }
+  40% {
+    top: -15px;
+    left: 100%;
+    border-color: #415A77;
+  }
+  60% {
+    top: -15px;
+    left: 50%;
+    border-color: #778DA9;
+  }
+  80% {
+    top: -15px;
+    left: -15px;
+    border-color: #E0E1DD;
+  }
+  90% {
+    top: 50% px;
+    left: -15px;
+    border-color: #415A77;
+  }
+  100% {
+    top: 100%;
+    left: -15px;
+    border-color: #0D1B2A;
+  }
+}
+.AddBook > div > h1::before {
+  content: "";
+  position: absolute;
+  animation-name: CycleLoopBefore;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes CycleLoopBefore {
+  0% {
+    bottom: -15px;
+    right: -15px;
+    border-color: #0D1B2A;
+  }
+  20% {
+    bottom: -15px;
+    right: 50%;
+    border-color: #1B263B;
+  }
+  40% {
+    bottom: -15px;
+    right: 100%;
+    border-color: #415A77;
+  }
+  60% {
+    bottom: -15px;
+    right: 50%;
+    border-color: #778DA9;
+  }
+  80% {
+    bottom: -15px;
+    right: -15px;
+    border-color: #E0E1DD;
+  }
+  90% {
+    bottom: 50%;
+    right: -15px;
+    border-color: #415A77;
+  }
+  100% {
+    bottom: 100%;
+    right: -15px;
+    border-color: #0D1B2A;
+  }
+}
+.AddBook > div > h1::after, .AddBook > div > h1::before {
+  border: 7px solid #778DA9;
+  border-radius: 100%;
+}
+
+.AddBook > div > form > div > label {
+  font-size: xx-large;
+  font-weight: 600;
+  color: #1B263B;
+}
+
+.AddBook > div > form > div > input {
+  font-size: large;
+  border: none;
+  height: 50px;
+  border-bottom: 2px solid #0D1B2A;
+  width: 60%;
+  margin: 80px 20%;
+}
+.AddBook > div > form > div > input:focus {
+  border: none;
+}
+
+.AddBook {
+  float: left;
+  width: 80%;
+}
+.AddBook > div > h1 {
+  margin: 50px auto;
+}
+.AddBook > div > form {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .AddBook > div > form {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .AddBook > div > form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .AddBook > div > form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .AddBook > div > form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.AddBook > div > form > div label, .AddBook > div > form > div input {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
 .Cart > div:first-of-type h1 {
   text-align: center;
   font-size: 50px;
@@ -542,6 +708,146 @@ body {
     border-color: #0D1B2A;
   }
 }
+.ANavbar div h3, aside ul li {
+  font-size: x-large;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1B263B;
+  transition: 1s;
+}
+.ANavbar div h3:hover, aside ul li:hover {
+  color: #0D1B2A;
+}
+
+.ANavbar {
+  width: 100%;
+  height: 10vh;
+  background-color: #E0E1DD;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: end;
+}
+.ANavbar div img {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  display: inline-block;
+}
+.ANavbar div h3 {
+  display: inline-block;
+  margin: auto 10px;
+}
+.ANavbar div:last-of-type {
+  display: flex;
+}
+
+aside {
+  width: 20%;
+  height: 90vh;
+  float: left;
+  background-color: #E0E1DD;
+}
+aside ul {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(10, 10%);
+  list-style: none;
+}
+aside ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: 1s;
+}
+aside ul li svg {
+  margin-right: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+@keyframes CycleLoopAfter {
+  0% {
+    top: -15px;
+    left: -15px;
+    border-color: #0D1B2A;
+  }
+  20% {
+    top: -15px;
+    left: 50%;
+    border-color: #1B263B;
+  }
+  40% {
+    top: -15px;
+    left: 100%;
+    border-color: #415A77;
+  }
+  60% {
+    top: -15px;
+    left: 50%;
+    border-color: #778DA9;
+  }
+  80% {
+    top: -15px;
+    left: -15px;
+    border-color: #E0E1DD;
+  }
+  90% {
+    top: 50% px;
+    left: -15px;
+    border-color: #415A77;
+  }
+  100% {
+    top: 100%;
+    left: -15px;
+    border-color: #0D1B2A;
+  }
+}
+@keyframes CycleLoopBefore {
+  0% {
+    bottom: -15px;
+    right: -15px;
+    border-color: #0D1B2A;
+  }
+  20% {
+    bottom: -15px;
+    right: 50%;
+    border-color: #1B263B;
+  }
+  40% {
+    bottom: -15px;
+    right: 100%;
+    border-color: #415A77;
+  }
+  60% {
+    bottom: -15px;
+    right: 50%;
+    border-color: #778DA9;
+  }
+  80% {
+    bottom: -15px;
+    right: -15px;
+    border-color: #E0E1DD;
+  }
+  90% {
+    bottom: 50%;
+    right: -15px;
+    border-color: #415A77;
+  }
+  100% {
+    bottom: 100%;
+    right: -15px;
+    border-color: #0D1B2A;
+  }
+}
 nav {
   display: grid;
   align-content: center;
@@ -651,10 +957,10 @@ nav > div ul li a {
   color: #415A77;
   transition: 1s;
 }
-nav > div ul li i {
+nav > div ul li svg {
   transition: 1s;
 }
-nav > div ul li:hover a, nav > div ul li:hover i {
+nav > div ul li:hover a, nav > div ul li:hover svg {
   color: #778DA9;
 }
 

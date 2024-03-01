@@ -101,7 +101,6 @@ body{
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
-
 %Title{
     text-align: center;
     font-size: 50px;
@@ -124,8 +123,6 @@ body{
         border-radius: 100%;
     }
 }
-
-
 %LightButton{
     border: 3px solid $HighDarkColor;
     border-radius: $radius;
@@ -147,7 +144,6 @@ body{
         transition: inherit;
     }
 }
-
 %DarkButton{
     border: 3px solid $LowDarkColor;
     border-radius: $radius;
@@ -169,21 +165,17 @@ body{
         transition: inherit;
     }
 }
-
-
 %SmallText{
     font-size:large;
     font-weight: 400;
     line-height: 1.5;
     color: $LowDarkColor;
 }
-
 %SubTitle{
     font-size: xx-large;
     font-weight: 600;
     color: $AvgDarkColor;
 }
-
 %Animation{
 
 }
@@ -198,7 +190,6 @@ body{
         border: none;
     }
 }
-
 %inputSubmit{
     font-size: large;
     border: none;
@@ -206,7 +197,6 @@ body{
     border-bottom: 2px solid $HighDarkColor;
     width: fit-content;
 }
-
 %NestedTest{
     >h2{
         color: $MidDarkColor;
@@ -217,5 +207,15 @@ body{
                 margin-left: 5px;
             }
         }
+    }
+}
+%LinkStyle{
+    font-size: x-large;
+    cursor: pointer;
+    font-weight: 600;
+    color: $AvgDarkColor;
+    transition: $TransitionTime;
+    &:hover{
+        color: $HighDarkColor;
     }
 }
