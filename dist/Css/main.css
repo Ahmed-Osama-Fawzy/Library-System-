@@ -1160,6 +1160,22 @@ body {
   scroll-behavior: smooth;
 }
 
+body .MainHome > h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #778DA9;
+  position: relative;
+  width: fit-content;
+}
+body .MainHome > h1::after {
+  content: "";
+  position: absolute;
+  animation-name: CycleLoopAfter;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 @keyframes CycleLoopAfter {
   0% {
     top: -15px;
@@ -1196,6 +1212,14 @@ body {
     left: -15px;
     border-color: #0D1B2A;
   }
+}
+body .MainHome > h1::before {
+  content: "";
+  position: absolute;
+  animation-name: CycleLoopBefore;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 @keyframes CycleLoopBefore {
   0% {
@@ -1234,6 +1258,11 @@ body {
     border-color: #0D1B2A;
   }
 }
+body .MainHome > h1::after, body .MainHome > h1::before {
+  border: 7px solid #778DA9;
+  border-radius: 100%;
+}
+
 body .ANavbar > div h3, body aside ul li {
   font-size: x-large;
   cursor: pointer;
@@ -1357,6 +1386,11 @@ body .ANavbar > div h3 {
   display: inline-block;
   margin: auto 10px;
 }
+body .ANavbar > div h3 > a {
+  text-decoration: none;
+  color: inherit;
+  transition: inherit;
+}
 body .ANavbar > div:last-of-type {
   display: flex;
   justify-content: center;
@@ -1380,6 +1414,12 @@ body aside ul li a {
 }
 body aside ul li svg {
   margin: 10px;
+}
+body .MainHome {
+  width: 100%;
+}
+body .MainHome > h1 {
+  margin: 100px auto;
 }
 * {
   box-sizing: border-box;

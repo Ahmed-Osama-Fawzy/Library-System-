@@ -1,0 +1,15 @@
+extends Fixed/Structure.pug
+block Page_Title
+    title Increase Books 
+block Page_Content 
+    section(class="AddBook")
+        div
+            h1 Increase Books Number
+            form(action="")
+                div 
+                    label(for="") Book ID
+                    input(type="text", name="BookID" requiered)
+                div 
+                    label(for="") Book Amount
+                    input(type="number", name="Amount" requiered)
+            button Increase

@@ -1,0 +1,28 @@
+extends Fixed/Structure.pug
+block Page_Title
+    title Setting 
+block Page_Content 
+    section(class="AddBook")
+        div
+            h1 Account Setting
+            form(action="")
+                div 
+                    label(for="") Username
+                    input(type="text", value="Ahmed Osama")
+                div 
+                    label(for="") Email
+                    input(type="email", value="ahmd.os@mail.com")
+                div 
+                    label(for="") Phone
+                    input(type="phone", value="01026301814")
+                div 
+                div
+                    label(for="") Old Password
+                    input(type="password")
+                div 
+                    label(for="") New Password
+                    input(type="password")
+                div 
+                    label(for="") Re Password 
+                    input(type="password")
+            button Update

@@ -1,5 +1,38 @@
 extends Fixed/Structure.pug
 block Page_Title
-    title Admin DashBoard
+    title Modify Book 
 block Page_Content 
-    section(class="AdminDashboard")
+    section(class="AddBook")
+        div
+            h1 Modify Book Data
+            form(action="")
+                div 
+                    label(for="") Book ID
+                    input(type="text", name="BookID" requiered)
+                div 
+                    label(for="") Book Title
+                    input(type="text", name="BookName" value="See Life")
+                div 
+                    label(for="") Book Price
+                    input(type="number", name="BookPrice" value=500)
+                div 
+                    label(for="") Book Amount
+                    input(type="number", name="BookAmount" value="100")
+                div 
+                    label(for="") Author Name
+                    input(type="text", name="BookAuthor" value="Jhon Wick")
+                div 
+                    label(for="") Pages Number
+                    input(type="number", name="BookPagesNumber" value="200")
+                div 
+                    label(for="") Update Cover
+                    input(type="file", name="TheBook")
+                div 
+                    label Category
+                    select 
+                        option(value="Most Sold") Most Sold
+                        option(value="Recantly Added")  Recantly Added
+                        option(value="Most Readed")  Most Readed
+                        option(value="Lowest Price")  Lowest Price
+                        option(value="Highest Price")  Highest Price
+            button Update
