@@ -1,0 +1,43 @@
+@use "Mixins.scss" as *;
+@use "Variables.scss" as *;
+.AdminShowOrders{
+    margin: 10px;
+    >div{
+        &:first-of-type{
+            >h1{
+                @extend %Title;
+                margin: 40px auto;
+                grid-column-start:1;
+                grid-column-end: 3;
+            }
+        }
+        display: grid;
+        @include MediaSizes-2-Sections(Large){}
+        @include MediaSizes-2-Sections(Medium){}
+        @include MediaSizes-2-Sections(Small){}
+        @include MediaSizes-2-Sections(Mini){}
+        &:not(&:first-of-type){
+            background-color: $AvgDarkColor;
+            margin: 10px auto;
+        }
+        >div{
+            display: grid;
+            @include MediaSizes-2-Sections(Large){}
+            @include MediaSizes-2-Sections(Medium){}
+            @include MediaSizes-2-Sections(Small){}
+            @include MediaSizes-2-Sections(Mini){}
+            @extend %NestedTest;
+            gap: 10px;
+            button{
+                @extend %LightButton;
+            }
+            &:first-of-type{
+                padding-left: 20px;
+            }
+            &:last-of-type{
+                align-items: center;
+                justify-items: center;
+            }
+        }
+    }
+}

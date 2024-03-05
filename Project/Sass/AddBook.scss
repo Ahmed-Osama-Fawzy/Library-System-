@@ -1,20 +1,27 @@
 @use "Mixins.scss" as *;
 @use "Variables.scss" as *;
 .AddBook{
-    float: left;
-    width: 80%;
+    width: 100%;
     >div{
+        text-align: center;
         >h1{
             @extend %Title;
             margin: 50px auto;
         }
         >form{
             display: grid;
-            @include MediaSizes-4-Sections(Large){}
+            @include MediaSizes-4-Sections(Large){
+                >input{
+                    grid-column-start: 1;
+                    grid-column-end: 5;
+                }
+            }
             @include MediaSizes-4-Sections(Medium){}
             @include MediaSizes-4-Sections(Small){}
             @include MediaSizes-4-Sections(Mini){}   
             >div{
+                margin: 10px;
+                text-align: center;
                 label,input{
                     display: block;
                 }
@@ -23,8 +30,18 @@
                 }
                 >input{
                     @extend %input;
+                    margin-top: 20px;
+                }
+                >select{
+                    @extend %LightButton;
+                    padding: 10px;
+                    margin-top: 25px;
                 }
             }
+        }
+        >button{
+            margin: 20px auto;
+            @extend %DarkButton;
         }
     }
 }
