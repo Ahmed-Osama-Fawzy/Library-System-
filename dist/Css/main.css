@@ -383,10 +383,10 @@ body {
   }
 }
 .AdminShowBooks > div {
+  width: 100%;
   margin: 10px auto;
 }
 .AdminShowBooks > div:first-of-type {
-  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -3750,6 +3750,265 @@ body {
 .ShowOrders > div > div:last-of-type {
   align-items: center;
   justify-items: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.AdminShowUsers > div:first-of-type > h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #778DA9;
+  position: relative;
+  width: fit-content;
+}
+.AdminShowUsers > div:first-of-type > h1::after {
+  content: "";
+  position: absolute;
+  animation-name: CycleLoopAfter;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes CycleLoopAfter {
+  0% {
+    top: -15px;
+    left: -15px;
+    border-color: #0D1B2A;
+  }
+  20% {
+    top: -15px;
+    left: 50%;
+    border-color: #1B263B;
+  }
+  40% {
+    top: -15px;
+    left: 100%;
+    border-color: #415A77;
+  }
+  60% {
+    top: -15px;
+    left: 50%;
+    border-color: #778DA9;
+  }
+  80% {
+    top: -15px;
+    left: -15px;
+    border-color: #E0E1DD;
+  }
+  90% {
+    top: 50% px;
+    left: -15px;
+    border-color: #415A77;
+  }
+  100% {
+    top: 100%;
+    left: -15px;
+    border-color: #0D1B2A;
+  }
+}
+.AdminShowUsers > div:first-of-type > h1::before {
+  content: "";
+  position: absolute;
+  animation-name: CycleLoopBefore;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes CycleLoopBefore {
+  0% {
+    bottom: -15px;
+    right: -15px;
+    border-color: #0D1B2A;
+  }
+  20% {
+    bottom: -15px;
+    right: 50%;
+    border-color: #1B263B;
+  }
+  40% {
+    bottom: -15px;
+    right: 100%;
+    border-color: #415A77;
+  }
+  60% {
+    bottom: -15px;
+    right: 50%;
+    border-color: #778DA9;
+  }
+  80% {
+    bottom: -15px;
+    right: -15px;
+    border-color: #E0E1DD;
+  }
+  90% {
+    bottom: 50%;
+    right: -15px;
+    border-color: #415A77;
+  }
+  100% {
+    bottom: 100%;
+    right: -15px;
+    border-color: #0D1B2A;
+  }
+}
+.AdminShowUsers > div:first-of-type > h1::after, .AdminShowUsers > div:first-of-type > h1::before {
+  border: 7px solid #778DA9;
+  border-radius: 100%;
+}
+
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div > button {
+  border: 3px solid #778DA9;
+  border-radius: 5px;
+  padding: 15px 30px;
+  background-color: #0D1B2A;
+  font-weight: 600;
+  color: #778DA9;
+  text-transform: uppercase;
+  transition: 1s;
+  width: fit-content;
+  font-size: x-large;
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div > button:hover {
+  color: #0D1B2A;
+  background-color: #778DA9;
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div > button a {
+  text-decoration: none;
+  color: inherit;
+  transition: inherit;
+}
+
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) > h2 {
+  color: #415A77;
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) > h2 > span {
+  color: #778DA9;
+  padding-left: 10px;
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) > h2 > span > svg {
+  margin-left: 5px;
+}
+
+.AdminShowUsers {
+  margin: 10px;
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .AdminShowUsers {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .AdminShowUsers {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .AdminShowUsers {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .AdminShowUsers {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.AdminShowUsers > div {
+  margin: 10px auto;
+}
+.AdminShowUsers > div:first-of-type > h1 {
+  margin: 40px auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) {
+    grid-template-columns: 20% 40% 40%;
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) {
+    grid-template-columns: 20% 40% 40%;
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) {
+    grid-template-columns: 33.333% 33.333% 33.333%;
+  }
+}
+@media (max-width: 739px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) {
+    grid-template-columns: 100%;
+  }
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > img {
+  width: 100%;
+  height: 100%;
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div {
+  padding: 20px;
+  background-color: #1B263B;
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:nth-last-child(2) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:last-of-type {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:last-of-type {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 990px) and (max-width: 1199px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:last-of-type {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 740px) and (max-width: 989px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 739px) {
+  .AdminShowUsers > div:not(.AdminShowUsers > div:first-of-type) > div:last-of-type {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 * {
   box-sizing: border-box;

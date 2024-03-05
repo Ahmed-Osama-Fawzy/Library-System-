@@ -1,26 +1,19 @@
 @use "Mixins.scss" as *;
 @use "Variables.scss" as *;
-.AdminShowBooks{
+.AdminShowUsers{
+    margin: 10px;
     display: grid;
     @include MediaSizes-1-Sections(Large){}
     @include MediaSizes-1-Sections(Medium){}
     @include MediaSizes-1-Sections(Small){}
     @include MediaSizes-1-Sections(Mini){}
     >div{
-        width: 100%;
         &:first-of-type{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            >button{
-                @extend %DarkButton;
-            }
-            >div{
-                width: fit-content;
-                >input{
-                    @extend %input;
-                    margin: 0;
-                }
+            >h1{
+                @extend %Title;
+                margin: 40px auto;
+                grid-column-start:1;
+                grid-column-end: 3;
             }
         }
         margin: 10px auto;
